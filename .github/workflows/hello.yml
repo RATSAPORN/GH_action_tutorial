@@ -1,0 +1,21 @@
+name: Hello World
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  greet:
+    runs-on: unbuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/chackout@v4
+
+      - name: Say Hello
+        run: echo "Hello From Github Action"
+
+      - name: show repo files
+        run: ls -la
+
+      - name: show current date
+        run: date
